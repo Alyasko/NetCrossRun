@@ -6,7 +6,13 @@ namespace NetCrossRun.Core
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new Program().Run();
+        }
+
+        private void Run()
+        {
+            var p = "dotnet --version".ExecuteCommand();
+            Console.WriteLine(p.StandardOutput.ReadToEnd());
         }
     }
 }

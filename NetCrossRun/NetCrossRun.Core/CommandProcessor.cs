@@ -4,7 +4,7 @@ namespace NetCrossRun.Core
 {
     public class CommandProcessor
     {
-        public (string Command, string Parameters) SeparateCommandParams(string sourceCommand)
+        public (string Command, string Arguments) SeparateCommandParams(string sourceCommand)
         {
             var command = sourceCommand.Trim();
 
@@ -16,8 +16,8 @@ namespace NetCrossRun.Core
                 return (command, null);
 
             var executable = command.Substring(0, spaceIndex).Trim();
-            var parameters = command.Replace(executable, "").Trim();
-            return (executable, parameters);
+            var args = command.Replace(executable, "").Trim();
+            return (executable, args);
         }
     }
 }

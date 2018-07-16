@@ -22,7 +22,7 @@ namespace NetCrossRun.Tests
 
             // Assert.
             Assert.Equal(expExec, result.Command);
-            Assert.Equal(expParams, result.Parameters);
+            Assert.Equal(expParams, result.Arguments);
         }
         
         [Theory]
