@@ -11,7 +11,7 @@ namespace NetCrossRun.Core
 
         private void Run()
         {
-            var p = "dotnet --version".ExecuteCommand();
+            var p = "dotnet --version".ExecuteCommand(true);
             Console.WriteLine(p.StandardOutput.ReadToEnd());
         }
     }
